@@ -1,5 +1,5 @@
 .intro-title-1{
-    font-size: 80px;
+    font-size: 90px;
     font-family: "Poppins";
     font-weight: 700;
 }
@@ -9,4 +9,8 @@
     font-family: "Poppins";
     font-weight: 700;
     color: #fde047;
+}
+
+.feature-boxes a{
+    text-decoration: none;
 }
