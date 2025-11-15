@@ -1,0 +1,92 @@
+.slider {
+    display: flex;
+    width: 600%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    animation: slide 36s infinite;
+    /* 6 images × 6s each (4s pause + 2s slide) */
+}
+
+.slider img {
+    width: 16.6666%;
+    /* 100% / 6 images */
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Keyframes for slide with pause */
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+
+    11.11% {
+        transform: translateX(0%);
+    }
+
+    /* pause on first image */
+
+    16.66% {
+        transform: translateX(-16.6666%);
+    }
+
+    /* slide to 2nd */
+    27.77% {
+        transform: translateX(-16.6666%);
+    }
+
+    /* pause on 2nd */
+
+    33.33% {
+        transform: translateX(-33.3333%);
+    }
+
+    /* slide to 3rd */
+    44.44% {
+        transform: translateX(-33.3333%);
+    }
+
+    /* pause on 3rd */
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    /* slide to 4th */
+    61.11% {
+        transform: translateX(-50%);
+    }
+
+    /* pause on 4th */
+
+    66.66% {
+        transform: translateX(-66.6666%);
+    }
+
+    /* slide to 5th */
+    77.77% {
+        transform: translateX(-66.6666%);
+    }
+
+    /* pause on 5th */
+
+    83.33% {
+        transform: translateX(-83.3333%);
+    }
+
+    /* slide to 6th */
+    94.44% {
+        transform: translateX(-83.3333%);
+    }
+
+    /* pause on 6th */
+
+    100% {
+        transform: translateX(0%);
+    }
+
+    /* loop back */
+}
