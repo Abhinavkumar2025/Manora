@@ -1,9 +1,10 @@
 import React from 'react'
+import './Lost_And_Found.css'
 
 const Lost_And_Found = () => {
   return (
     <div>
-      I am Lost and Found
+      
     </div>
   )
 }
