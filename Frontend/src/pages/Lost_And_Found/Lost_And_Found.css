@@ -1,0 +1,30 @@
+h1{
+    font-family: "BBH Bogle","Montserrat";
+}
+p{
+    font-family: "Montserrat","BBH Bogle";
+}
+
+.heading-1{
+    font-size: 75px;
+    /* font-weight: 300; */
+}
+
+.sub-heading-1{
+    font-size: 30px;
+}
+
+.report_form{
+    background-color: rgb(241, 241, 239);
+}
+.report_form_heading{
+    font-family: "Montserrat","BBH Bogle";
+    font-weight: 800;
+    /* letter-spacing: px; */
+}
+
+.slide{
+    height: 1000px;
+    width: 1000px;
+}
+
