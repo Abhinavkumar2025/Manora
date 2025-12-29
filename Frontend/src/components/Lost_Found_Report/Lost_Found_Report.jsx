@@ -8,11 +8,31 @@ const Lost_Found_Report = () => {
         register,
         handleSubmit,
         formState: { errors },
+        setError,
     } = useForm();
 
-    const onSubmit = (data) => {
-        console.log("Report Data:", data);
+    const onSubmit = async(data) => {
+        const res = await fetch('http://localhost:5000/manora/report',{
+            method: "POST",
+            headers: {"Content-Type" : "application/json"},
+            body: JSON.stringify(data),
+        });
+
+        const result = await res.json();
+
+        if (!res.ok && result.errors) {
+            result.errors.forEach((err) => {
+                setError(err.field, {
+                    type: "server",
+                    message: err.message,
+                });
+            });
+            return;
+        }
+
+        console.log("Success:", result);
     };
+
   return (
     <form id='report_form' onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-3 p-6">
 

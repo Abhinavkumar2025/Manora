@@ -1,6 +1,6 @@
-import mongoose from mongoose
+import mongoose from 'mongoose'
 
-const reportScehma = new mongoose.Schema({
+const reportSchema = new mongoose.Schema({
     reportType:{
         type: String,
         required: true
