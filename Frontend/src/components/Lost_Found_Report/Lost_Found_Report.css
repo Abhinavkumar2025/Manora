@@ -1,3 +1,10 @@
+/* #report_form{
+    background-image: url("../../assets/images/lost_found_report_bg_2.png");
+    background-size: cover;
+    opacity: 0.96;
+} */
+
+
 #report_form label{
     font-family: "Montserrat" ;
     font-weight: 500;

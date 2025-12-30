@@ -16,15 +16,32 @@ p{
 
 .report_form{
     background-color: rgb(241, 241, 239);
+    background-image: url("../../assets/images/lost_found_bg_2.png");
+    /* background-size: cover; */
+    /* color: rgb(241, 255, 165); */
 }
 .report_form_heading{
+    /* background-image: url("../../assets/images/los");
+    background-size: cover; */
     font-family: "Montserrat","BBH Bogle";
     font-weight: 800;
     /* letter-spacing: px; */
 }
 
-.slide{
-    height: 1000px;
-    width: 1000px;
+.found_items{
+    background-image: url("../../assets/images/lost_found_bg_2.png");
+    background-size: cover;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
 }
 
+.found_items_search{
+    background-image: url("../../assets/images/Khandoli\ Park_Giridih.png");
+    background-size: cover;
+    background-color: aliceblue;
+    
+}
+
+.found_items h2{
+    font-family: "Montserrat", "BBH Bogle";
+    font-weight: 800;
+}
