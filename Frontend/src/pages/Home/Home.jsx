@@ -23,8 +23,9 @@ const Home = () => {
           <Link to="" className='block w-1/4'><Box img={img3} h3={"Places"} p={"Every corner of Jharkhand has a tale to tell Come visit, live the story"} /></Link>
         </div>
       </div>
-
+      
     </div>
+
 
   )
 }

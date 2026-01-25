@@ -6,6 +6,7 @@ import LostAndFound from './pages/Lost_And_Found/Lost_And_Found';
 import Contest from './pages/Contest/Contest';
 import Winners from './pages/Winners/Winners';
 import Reviews from './pages/Reviews/Reviews';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/winners" element={<Winners />} />
         <Route path="/reviews" element={<Reviews />} />
       </Routes>
+      <Footer/>
     </>
   );
 }

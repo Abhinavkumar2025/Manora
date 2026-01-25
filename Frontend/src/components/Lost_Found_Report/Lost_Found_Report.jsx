@@ -43,7 +43,7 @@ const Lost_Found_Report = () => {
     };
 
   return (
-    <form id='report_form' onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-3 p-6 pt-0">
+    <form id='report_form' onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-3 p-6 pt-0 pb-1">
 
         {/* Report Type */}
         <div className="flex flex-col">
@@ -105,7 +105,7 @@ const Lost_Found_Report = () => {
         </div>
 
         {/* Submit */}
-          <button type="submit" disabled={isSubmitting} className="bg-black text-white py-2 rounded hover:bg-gray-800">
+          <button type="submit" disabled={isSubmitting} className=" text-white py-2 rounded ">
               {isSubmitting ? "Submitting..." : "Submit Report"}
         </button>
     </form>

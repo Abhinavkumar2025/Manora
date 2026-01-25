@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <div className='navbar h-100 py-3'>
+    <div className='navbar absolute z-50 h-100 py-3'>
       <div id='title-name' className='text-4xl font-bold ps-4'>Manora</div>
       <div className='flex'>
         <ul className='my-auto flex gap-4'>

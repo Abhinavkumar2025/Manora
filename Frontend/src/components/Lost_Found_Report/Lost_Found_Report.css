@@ -4,8 +4,20 @@
     opacity: 0.96;
 } */
 
+#report_form label{
+    color: rgb(0, 3, 93);
+}
+
+#report_form option{
+    color: rgb(0, 3, 93);
+}
 
 #report_form label{
     font-family: "Montserrat" ;
     font-weight: 500;
 }
+
+#fs{
+    color: #25b01b;
+}
+
