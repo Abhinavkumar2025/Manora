@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const Lost_And_Found = () => {
   const [reports, setReports] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [mode, setMode] = useState("hero"); 
+  const [mode, setMode] = useState("hero");
 
   useEffect(() => {
     const fetchReports = async () => {
@@ -62,7 +62,7 @@ const Lost_And_Found = () => {
           <div
             className={`background_report absolute inset-0 flex items-center justify-center px-16 gap-96
         transition-all duration-700 ease-in-out
-        ${mode === "report" ? "opacity-100 translate-x-0": "opacity-0 translate-x-24 pointer-events-none"}
+        ${mode === "report" ? "opacity-100 translate-x-0" : "opacity-0 translate-x-24 pointer-events-none"}
       `}
           >
             {/* LEFT TEXT */}
@@ -90,7 +90,7 @@ const Lost_And_Found = () => {
 
       {/*Search Section */}
       <div className={`search_section h-full absolute inset-0 z-10 mt-18 transition-all duration-700 ease-in-out
-        ${mode === "search"? "opacity-100 translate-x-0 search_active": "opacity-0 translate-x-24 pointer-events-none"}`}>
+        ${mode === "search" ? "opacity-100 translate-x-0 search_active" : "opacity-0 translate-x-24 pointer-events-none"}`}>
         <div className=" found_items relative h-[770px] z-20 flex flex-row justify-between">
           <div className='found_left_side w-[35%] h-[772px] bg-cover flex flex-col justify-start text-center items-center'>
             <div className="hanging_board mt-16">
@@ -103,15 +103,15 @@ const Lost_And_Found = () => {
           <div className='found_right_side w-[65%] relative '>
             <div className='found_items_upper p-3 flex justify-between '>
               <input type="text" placeholder=' Search here' value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)} className='bg-white w-[400px]'/>
-              <button  onClick={() => setMode("hero")} className='flex rounded bg-neutral-300 px-10 py-1 pb-2 text-black hover:bg-gray-950 hover:!text-amber-50'>Go back</button>
+                onChange={(e) => setSearchTerm(e.target.value)} className='bg-white w-[400px]' />
+              <button onClick={() => setMode("hero")} className='flex rounded bg-neutral-300 px-10 py-1 pb-2 text-black hover:bg-gray-950 hover:!text-amber-50'>Go back</button>
             </div>
             {/* <hr className='m-0' /> */}
             <div className='something'>
               <div className='blue_water overflow-y-auto h-[704px]'>
                 <div className="grid grid-cols-3 gap-6 p-6">
                   {filteredReports.map(item => (
-                    <Lost_Stuff_Container  
+                    <Lost_Stuff_Container
                       key={item._id}
                       itemName={item.itemName}
                       location={item.location}
@@ -124,7 +124,7 @@ const Lost_And_Found = () => {
               </div>
             </div>
           </div>
-        </div>       
+        </div>
       </div>
     </div>
   )

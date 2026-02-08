@@ -61,25 +61,31 @@ if (process.env.GITHUB_CLIENT_ID && process.env.GITHUB_CLIENT_SECRET) {
             },
             async (accessToken, refreshToken, profile, done) => {
                 try {
+                    console.log("GitHub Profile:", profile); // Debug logging
+
                     const email = profile.emails?.[0]?.value;
                     const githubId = profile.id;
-                    const name = profile.displayName || profile.username;
+                    const name = profile.displayName || profile.username || "GitHub User"; // Fallback for name
                     const avatar = profile.photos?.[0]?.value;
 
                     if (!email) {
-                        return done(new Error("No email found in GitHub profile"), null);
+                        console.error("GitHub Auth Error: No email found in profile");
+                        return done(new Error("No email found in GitHub profile. Please ensure your email is public or grant email access."), null);
                     }
 
                     let user = await User.findOne({ email });
 
                     if (user) {
+                        console.log("GitHub Auth: User found, updating provider info if needed");
                         if (!user.provider_id) {
                             user.provider = "github";
                             user.provider_id = githubId;
                             user.avatar = avatar;
                             await user.save();
+                            console.log("GitHub Auth: Linked GitHub to existing account");
                         }
                     } else {
+                        console.log("GitHub Auth: Creating new user");
                         user = await User.create({
                             name,
                             email,
@@ -87,10 +93,12 @@ if (process.env.GITHUB_CLIENT_ID && process.env.GITHUB_CLIENT_SECRET) {
                             provider_id: githubId,
                             avatar,
                         });
+                        console.log("GitHub Auth: New user created");
                     }
 
                     done(null, user);
                 } catch (error) {
+                    console.error("GitHub Auth Error:", error);
                     done(error, null);
                 }
             }

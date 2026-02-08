@@ -47,6 +47,7 @@ export const signup = async (req, res) => {
                 name: user.name,
                 email: user.email,
                 provider: user.provider,
+                avatar: user.avatar,
             },
         });
     } catch (error) {
@@ -54,7 +55,7 @@ export const signup = async (req, res) => {
     }
 };
 
-// ✅ LOGIN Controller
+// LOGIN Controller
 export const login = async (req, res) => {
     try {
         const { email, password } = req.body;
@@ -94,6 +95,7 @@ export const login = async (req, res) => {
                 name: user.name,
                 email: user.email,
                 provider: user.provider,
+                avatar: user.avatar,
             },
         });
     } catch (error) {
