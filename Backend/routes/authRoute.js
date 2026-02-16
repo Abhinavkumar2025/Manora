@@ -37,7 +37,7 @@ router.get(
 
             // Redirect to frontend with token
             res.redirect(
-                `http://localhost:5173/oauth-success?token=${token}`
+                `${process.env.CLIENT_URL}/oauth-success?token=${token}`
             );
         })(req, res, next);
     }
@@ -66,7 +66,7 @@ router.get(
                 { expiresIn: "2d" }
             );
 
-            res.redirect(`http://localhost:5173/oauth-success?token=${token}`);
+            res.redirect(`${process.env.CLIENT_URL}/oauth-success?token=${token}`);
         })(req, res, next);
     }
 );
