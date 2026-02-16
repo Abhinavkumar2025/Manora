@@ -26,7 +26,7 @@ const limiter = rateLimit({
 app.use(limiter);
 
 app.use(cors({
-    origin: process.env.FRONTEND_URL || "*", // Use env var in production
+    origin: process.env.FRONTEND_URL, // Strict origin check
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
