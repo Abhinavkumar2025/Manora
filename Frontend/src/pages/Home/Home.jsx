@@ -19,7 +19,7 @@ const Home = () => {
         <p className='text-white text-2xl'>Recover items lost during your trip with our lost-and-found.</p>
         <div className='feature-boxes flex justify-around items-center mt-5'>
           <Link to="/lost-and-found" className='block w-1/4'><Box img={img1} h3={"Lost & Found"} p={"Lost something? Let’s get it back where it belongs"} /></Link> 
-          <Link to="/contest" className='block w-1/4'><Box img={img2} h3={"Photo Contest"} p={"Share your best travel photos and win to get free ticket in next trip"} /></Link>
+          <Link to="/manora/gallery" className='block w-1/4'><Box img={img2} h3={"Photo Gallery"} p={"Collect your journeys. Relive them anytime"} /></Link>
           <Link to="" className='block w-1/4'><Box img={img3} h3={"Places"} p={"Every corner of Jharkhand has a tale to tell Come visit, live the story"} /></Link>
         </div>
       </div>

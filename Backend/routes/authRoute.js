@@ -32,7 +32,7 @@ router.get(
             const token = jwt.sign(
                 { id: user._id },
                 process.env.JWT_SECRET,
-                { expiresIn: "7d" }
+                { expiresIn: "2d" }
             );
 
             // Redirect to frontend with token
@@ -63,7 +63,7 @@ router.get(
             const token = jwt.sign(
                 { id: user._id },
                 process.env.JWT_SECRET,
-                { expiresIn: "7d" }
+                { expiresIn: "2d" }
             );
 
             res.redirect(`http://localhost:5173/oauth-success?token=${token}`);

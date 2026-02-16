@@ -36,9 +36,7 @@ export default function Navbar() {
         <ul className='my-auto flex gap-4'>
           <li><Link className='text-black font-semibold text-lg' to='/'>Home</Link></li>
           <li><Link className='text-black font-semibold text-lg' to={'/lost-and-found'}>Lost & Found</Link></li>
-          <li><Link className='text-black font-semibold text-lg' to={'/contest'}>Contest</Link></li>
-          <li><Link className='text-black font-semibold text-lg' to={'/winners'}>Winners</Link></li>
-          <li><Link className='text-black font-semibold text-lg' to={'/reviews'}>Reviews</Link></li>
+          <li><Link className='text-black font-semibold text-lg' to={'/manora/gallery'}>Photo Gallery</Link></li>
         </ul>
       </div>
 

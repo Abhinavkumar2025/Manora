@@ -10,11 +10,7 @@ const Footer = () => {
           <div className="col-6" id="f_descp">
             <h2>Manora</h2>
             <p>
-              Our platform unites travel storytelling, photography, and
-              community engagement in one destination. Users share experiences,
-              participate in weekly contests with tourism rewards, and benefit
-              from an integrated Lost & Found system that strengthens
-              connections and fosters meaningful impact.
+              Manora connects everyday safety with personal storytelling. Users can document lost items, upload visual details, and store travel memories in organized galleries. Designed with secure access and dependable backend services, the platform ensures that both critical reports and cherished experiences are preserved with care.
             </p>
           </div>
 
