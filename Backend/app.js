@@ -26,7 +26,7 @@ const limiter = rateLimit({
 app.use(limiter);
 
 app.use(cors({
-    origin: process.env.FRONTEND_URL, // Strict origin check
+    origin: [process.env.FRONTEND_URL, "http://localhost:5173"], // Allow production and local dev
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));

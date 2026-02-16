@@ -8,4 +8,13 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
+  server: {
+    proxy: {
+      '/manora': {
+        target: 'http://localhost:10000',
+        changeOrigin: true,
+        secure: false,
+      },
+    },
+  },
 })
