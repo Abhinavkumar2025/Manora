@@ -9,6 +9,7 @@ passport.use(
             clientID: process.env.GOOGLE_CLIENT_ID,
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
             callbackURL: process.env.GOOGLE_CALLBACK_URL || "http://localhost:5000/manora/auth/google/callback",
+            proxy: true,
         },
         async (accessToken, refreshToken, profile, done) => {
             try {
@@ -57,6 +58,7 @@ if (process.env.GITHUB_CLIENT_ID && process.env.GITHUB_CLIENT_SECRET) {
                 clientID: process.env.GITHUB_CLIENT_ID,
                 clientSecret: process.env.GITHUB_CLIENT_SECRET,
                 callbackURL: process.env.GITHUB_CALLBACK_URL || "http://localhost:5000/manora/auth/github/callback",
+                proxy: true,
                 scope: ["user:email"],
             },
             async (accessToken, refreshToken, profile, done) => {

@@ -14,6 +14,7 @@ import galleryRoutes from "./routes/galleryRoute.js";
 import albumRoutes from "./routes/albumRoute.js";
 
 const app = express();
+app.set("trust proxy", 1); // Trust first proxy (Render/Heroku/Vercel)
 connectDB();
 
 app.use(helmet());
